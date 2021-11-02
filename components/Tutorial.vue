@@ -22,8 +22,8 @@
 // lllllll
 <script>
 // import Vue from '
-import { Vue } from 'vue-property-decorator';
-import Component, { namespace } from 'nuxt-class-component'
+import Vue from "vuetify"
+import Component from 'vue-class-component'
 
 export default @Component({
 })
@@ -41,7 +41,7 @@ class form extends Vue {
 
   calculate(e){
     e.preventDefault()
-    const arr = this.string.split(",").map(item => item.trim().toLowerCase())
+    const arr = this.string.split('').map(item => item === item.toUpperCase() && item !== ' ' && item !== ','?`,${item}`: item).join('').split(",").map(item => item.trim().toLowerCase())
     console.log(arr);
     const uniqArr = arr.map(item => item.trim().toLowerCase()).filter((item, index, arr) => arr.indexOf(item) === index)
     const obj = {}
