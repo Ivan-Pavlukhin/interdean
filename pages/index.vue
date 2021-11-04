@@ -36,7 +36,7 @@ import Component from 'vue-class-component'
 export default @Component({
 })
 
-class form extends Vue {
+class App extends Vue {
   title = "The best"
   string = ''
   list = []
